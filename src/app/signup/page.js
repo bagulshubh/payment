@@ -18,7 +18,8 @@ const page = () => {
         const output = await createUser(data);
         console.log(output);
         if(output === "Success"){
-            router.push("/login")
+          localStorage.setItem("user",JSON.stringify(output[0]))
+          router.push("/")
         }
         else{
             setres(output);

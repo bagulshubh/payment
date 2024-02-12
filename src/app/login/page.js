@@ -1,9 +1,12 @@
 'use client'
+import { UserContext } from '@/Context/UserContext'
 import { login } from '@/Service/UserService'
 import { useRouter } from 'next/navigation'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 
 const page = () => {
+
+  const context = useContext(UserContext)
 
   const [data,setdata] = useState({
     name:"",
@@ -22,10 +25,12 @@ const page = () => {
   
   const clickHandler = async()=>{
     const output = await login(data)
-    if(output.success == false){
+    if(output?.success === false){
       setres(output.message)
     }
     else{
+      context.setuser(output[0])
+      localStorage.setItem("user",JSON.stringify(output[0]))
       router.push("/")
     }
   

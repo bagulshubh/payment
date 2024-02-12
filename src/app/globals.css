@@ -18,9 +18,16 @@ body {
   background-color: var(--darb-bg);
   color: var(--dark-text);
 }
+.home-wrapper{
+    width: var(--mobile-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vh;
+}
 .signup-wrapper{
     width:var(--mobile-width);
-    margin: 5vh auto;
+    margin: 1vh auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,7 +60,86 @@ body {
     color: var(--red);
     text-align: center;
 }
-
+.nav-wrapper{
+    display: flex;
+    margin: 2vh auto;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.auth-con{
+    display: flex;
+    justify-content: space-between;
+    gap: 3vw;
+}
+.nav-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-bg);
+    color: var(--light-text);
+    font-size: 20px;
+    padding: 1vh 1vw;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.heading-con{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    font-size: 20px;
+    font-weight: 600;
+    width: 90%;
+    margin: 0 auto;
+}
+.red-btn{
+    margin: 0 auto;
+    background-color: var(--red);
+    padding: 1vh 1vw;
+    font-size: 20px;
+    border: 1px solid var(--raised-bg);
+    border-radius: 3px;
+    cursor: pointer;
+}
+.home-para{
+    margin: 1vh auto;
+    font-size: 20px;
+    text-align: center;
+}
+.explore-wrapper{
+    width: var(--mobile-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+.user-card-con{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2vh;
+}
+.user-card{
+    background-color: var(--raised-bg);
+    width: 100%;
+    padding: 1vh 2vw;
+    font-size: 20px;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.connect-btn{
+    background-color: var(--red);
+    padding: 0.5vh 1vw;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 
 

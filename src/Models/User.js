@@ -4,6 +4,8 @@ let User;
 
 if (mongoose.models && mongoose.models.User) {
     User = mongoose.models.User;
+    const userSchema = User.schema;
+
 } else {
     const userSchema = new mongoose.Schema({
         name: {

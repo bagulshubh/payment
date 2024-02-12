@@ -2,7 +2,6 @@
 
 import User from "@/Models/User";
 import { connectMongoDB } from "@/libs/MongoConnect"
-import { Contrail_One } from "next/font/google";
 
 export const createUser = async(data)=>{
 
@@ -23,6 +22,7 @@ export const createUser = async(data)=>{
             password:password,
         })
         console.log(created);
+
         return "Success"
     } catch(err){
         console.log(err);
@@ -42,6 +42,7 @@ export const login = async(data)=>{
         }
 
         const user = await User.find({name:name , password:password});
+        console.log("User here"+user)
 
         if(Object.keys(user).length  === 0){
             return {success:false,message:"User does not exists"}
@@ -53,3 +54,5 @@ export const login = async(data)=>{
         console.log(err);
     }
 }
+
+
