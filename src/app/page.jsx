@@ -14,6 +14,7 @@ export default function Home() {
 
   useEffect(()=>{
     user = JSON.parse(localStorage.getItem("user")) || null
+    console.log(user)
     context.setuser(user);
    },[])
 

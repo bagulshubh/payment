@@ -29,6 +29,7 @@ const page = () => {
       setres(output.message)
     }
     else{
+      console.log(output[0]);
       context.setuser(output[0])
       localStorage.setItem("user",JSON.stringify(output[0]))
       router.push("/")

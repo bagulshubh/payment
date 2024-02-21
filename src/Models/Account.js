@@ -8,11 +8,11 @@ if (mongoose.models && mongoose.models.Account) {
 
 } else {
     const accountSchema = new mongoose.Schema({
-        userId:{
+        userId1:{
             type:String,
             required:true
         },
-        name:{
+        userId2:{
             type:String,
             required:true
         },

@@ -55,4 +55,14 @@ export const login = async(data)=>{
     }
 }
 
+export const getById = async(id)=>{
+    try{
 
+        const user = await User.findById(id);
+        console.log(user)
+        return user;
+
+    } catch(err){
+        console.log(err);
+    }
+}

@@ -6,6 +6,15 @@ if (mongoose.models && mongoose.models.User) {
     User = mongoose.models.User;
     const userSchema = User.schema;
 
+    if (!userSchema.paths.connectedArr) {
+        userSchema.add({
+            connectedArr: [{
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'User',
+            }],
+        });
+    }
+
 } else {
     const userSchema = new mongoose.Schema({
         name: {
@@ -19,6 +28,10 @@ if (mongoose.models && mongoose.models.User) {
         verified: {
             type: Boolean,
             default: false,
+        },
+        connected: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User',
         },
     });
 

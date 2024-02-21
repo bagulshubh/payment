@@ -8,6 +8,7 @@ import UserCard from '@/Components/UserCard';
 const page = () => {
 
     const [data,setdata] = useState({});
+    
 
     useEffect(()=>{
 

@@ -8,6 +8,8 @@ const Navbar = () => {
     const user = context.user;
     const router = useRouter();
 
+    console.log(user)
+
     const logoutHandler = ()=>{
         localStorage.removeItem("user");
         context.setuser({});
@@ -25,7 +27,7 @@ const Navbar = () => {
                 <div onClick={()=>{router.push("/signup")}} className='nav-btn'>Signup</div>
             </div> :
             <div className='auth-con'>
-                <div className='nav-btn'>Contacts</div>
+                <div className='nav-btn' onClick={()=>{router.push("/explore")}}>Contacts</div>
                 <div className='nav-btn' onClick={logoutHandler}>Log Out</div>
             </div>
         }
